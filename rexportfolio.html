@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Rex Lopez — BSIT Student, Aspiring Web Developer and UI Designer.">
+<title>REX LOPEZ | Digital Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="preload">
+
+<div id="scrollProgress" aria-hidden="true"></div>
+<div class="motion-orbit" aria-hidden="true"></div>
+<div class="ambient-beam" aria-hidden="true"></div>
+<div id="pageCurtain" aria-hidden="true"></div>
+<div id="curtainLabel" aria-hidden="true"></div>
+<div id="siteLoader" aria-label="Loading portfolio">
+    <div class="loader-inner">
+        <div class="loader-mark">SAYET<span>KA</span></div>
+        <div class="loader-track"></div>
+        <button class="enter-btn" id="enterBtn" type="button">ENTER PORTFOLIO ♪</button>
+        <p class="enter-hint">SOUND ON FOR THE BEST EXPERIENCE</p>
+    </div>
+</div>
+
+
+<!-- BACKGROUND MUSIC: put your audio file next to index.html and name it music.mp3 (or change src below) -->
+<audio id="bgMusic" src="music.mp3" loop preload="auto"></audio>
+
+<div class="music-player" id="musicPlayer" role="group" aria-label="Background music">
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music" aria-pressed="false">
+        <svg class="ico-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="ico-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="music-info">
+        <span class="music-title" id="musicTitle">BACKGROUND MUSIC</span>
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
+    <input class="music-volume" id="musicVolume" type="range" min="0" max="100" value="35" aria-label="Music volume">
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-outline" aria-hidden="true"></div>
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="brand">
+            <a href="#" class="logo" data-page="home" aria-label="Rex Lopez Home">
+            SHIMAN<span>SHIMAN</span>
+        </a>
+            <button class="profile-chip" type="button" data-page="profile" aria-label="Open Rex Lopez's profile">
+                <span class="chip-avatar">
+                    <img src="rex.jpg" alt="">
+                    <i class="chip-dot"></i>
+                </span>
+                <span class="chip-name">Rex Lopez</span>
+            </button>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><button class="nav-link active" data-page="home">HOME</button></li>
+            <li><button class="nav-link" data-page="profile">PROFILE</button></li>
+            <li><button class="nav-link" data-page="work">WORK</button></li>
+            <li><button class="nav-link" data-page="about">ABOUT</button></li>
+            <li><button class="nav-link" data-page="services">SERVICES</button></li>
+            <li><button class="nav-link" data-page="notes">NOTES</button></li>
+            <li><button class="nav-link" data-page="contact">CONTACT</button></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme" title="Switch theme">
+                ☼
+            </button>
+
+            <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+                <span class="menu-button-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+        </div>
+
+    </nav>
+</header>
+
+<main>
+
+<!-- =========================================
+     HOME PAGE
+========================================= -->
+
+<section class="page active" id="home">
+
+    <div class="container hero">
+
+        <div class="hero-grid">
+
+            <div class="hero-content">
+
+                <div class="hero-status reveal">
+                    <span class="status-dot"></span>
+                    AVAILABLE FOR LEARNING & OPPORTUNITIES
+                </div>
+
+                <h1 class="hero-title reveal delay-1">
+                    HELLO,<br>
+                    I'M <span class="accent">REX</span><br>
+                    <span class="outline">LOPEZ.</span>
+                </h1>
+
+                <p class="hero-role" aria-label="Rex Lopez is a BSIT student, aspiring web developer, UI/UX explorer and database designer"><span class="role-prefix" aria-hidden="true">&gt;</span><span id="typedRole" aria-hidden="true">BSIT Student</span><span class="caret" aria-hidden="true"></span></p>
+
+                <p class="hero-description reveal delay-2">
+                    A BSIT student and aspiring web developer who enjoys
+                    building creative digital experiences, exploring modern
+                    web technologies, and turning ideas into functional designs.
+                </p>
+
+                <div class="hero-buttons reveal delay-3">
+                    <button class="btn btn-primary" data-page="work">
+                        EXPLORE MY WORK ↗
+                    </button>
+
+                    <button class="btn btn-outline" data-page="contact">
+                        CONTACT ME
+                    </button>
+
+                    <a class="resume-download" href="Rex_Lopez_Resume.pdf" download="Rex_Lopez_Resume.pdf">
+                        <span class="download-icon" aria-hidden="true">↓</span> DOWNLOAD RESUME
+                    </a>
+                </div>
+
+                <div class="hero-socials reveal delay-3">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">FACEBOOK ↗</a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual reveal delay-2">
+
+                <div class="hero-tag tag-top">CREATIVE DEVELOPER</div>
+
+                <div class="photo-frame">
+                    <!-- Replace rex.jpg with your actual profile picture filename -->
+                    <img src="rex.jpg" alt="Portrait of Rex Lopez" class="profile-photo">
+
+                    <div class="photo-caption">
+                        <span>REX LOPEZ</span>
+                        <span>BSIT STUDENT</span>
+                    </div>
+                </div>
+
+                <div class="hero-tag tag-bottom">DESIGN × TECHNOLOGY</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="intro-strip">
+        <div class="container intro-grid">
+
+            <div class="intro-item reveal">
+                <div class="intro-number">01</div>
+                <div class="intro-text">
+                    <strong>WEB DEVELOPMENT</strong>
+                    <span>Learning by building</span>
+                </div>
+            </div>
+
+            <div class="intro-item reveal delay-1">
+                <div class="intro-number">02</div>
+                <div class="intro-text">
+                    <strong>UI / UX DESIGN</strong>
+                    <span>Creative digital layouts</span>
+                </div>
+            </div>
+
+            <div class="intro-item reveal delay-2">
+                <div class="intro-number">03</div>
+                <div class="intro-text">
+                    <strong>INFORMATION TECHNOLOGY</strong>
+                    <span>Always exploring</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">SELECTED PROJECTS</span>
+            <h2 class="section-title">A FEW THINGS<br>I'VE <span class="accent">BUILT.</span></h2>
+            <p class="section-description">
+                A collection of academic projects, website concepts, and
+                creative experiments that reflect my learning journey.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card reveal" tabindex="0" role="button"
+                data-project="redline">
+                <div class="project-image">
+                    <img src="redline.jpg" alt="REDLINE clothing store project">
+                    <span class="project-number">PROJECT / 01</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">E-COMMERCE / WEB DESIGN</span>
+                    <h3>REDLINE Store</h3>
+                    <p>A streetwear-inspired online store concept with a bold visual identity and product-focused layout.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay-1" tabindex="0" role="button"
+                data-project="heart">
+                <div class="project-image">
+                    <img src="heart-studio.jpg" alt="Heart Studio information system project">
+                    <span class="project-number">PROJECT / 02</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">MIS / INFORMATION SYSTEM</span>
+                    <h3>Heart Studio</h3>
+                    <p>An information system concept focused on inventory management and document organization for a printing shop.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags">
+                            <span>MIS</span><span>DATABASE</span><span>UI DESIGN</span>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="margin-top:35px" class="reveal">
+            <button class="btn btn-outline" data-page="work">VIEW ALL PROJECTS ↗</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROFILE PAGE (Facebook-style)
+========================================= -->
+
+<section class="page" id="profile">
+
+    <div class="container profile-wrap">
+
+        <div class="fb-card profile-header reveal">
+
+            <div class="cover">
+                <!-- Add your cover photo as cover.jpg (wide image, about 1600x600). A gradient shows until then. -->
+                <img src="cover.jpg" alt="" class="cover-img" onerror="this.style.display='none'">
+            </div>
+
+            <div class="profile-main">
+
+                <div class="avatar-wrap">
+                    <img src="rex.jpg" alt="Profile photo of Rex Lopez">
+                    <span class="online-dot" title="Available for learning &amp; opportunities"></span>
+                </div>
+
+                <div class="profile-id">
+                    <h1>Rex Lopez</h1>
+                    <p class="profile-headline">BSIT Student · Aspiring Web Developer &amp; UI Designer</p>
+                    <div class="profile-stats">
+                        <span><strong data-count="6">6</strong> Projects</span>
+                        <span><strong data-count="6">6</strong> Interests</span>
+                        <span><strong data-count="4">4</strong> Notes</span>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="btn btn-primary" data-page="contact">✉ MESSAGE</button>
+                    <a class="btn btn-outline" href="Rex_Lopez_Resume.pdf" download="Rex_Lopez_Resume.pdf">↓ RESUME</a>
+                </div>
+
+            </div>
+
+            <div class="profile-tabs" role="tablist" aria-label="Profile sections">
+                <button class="ptab active" role="tab" aria-selected="true" data-ptab="posts">POSTS</button>
+                <button class="ptab" role="tab" aria-selected="false" tabindex="-1" data-ptab="about">ABOUT</button>
+                <button class="ptab" role="tab" aria-selected="false" tabindex="-1" data-ptab="photos">PHOTOS</button>
+            </div>
+
+        </div>
+
+        <!-- POSTS TAB -->
+        <div class="ptab-panel" data-panel="posts" role="tabpanel">
+            <div class="profile-body">
+
+                <aside class="profile-side">
+
+                    <div class="fb-card card-pad reveal">
+                        <h3>Intro</h3>
+                        <p class="intro-bio">Learning. Building. Improving.</p>
+                        <ul class="intro-list">
+                            <li><span class="ico">🎓</span><span>Third-year <strong>BS Information Technology</strong> student</span></li>
+                            <li><span class="ico">📍</span><span>Based in <strong>Philippines</strong></span></li>
+                            <li><span class="ico">💻</span><span>Interested in <strong>Web Development &amp; UI Design</strong></span></li>
+                            <li><span class="ico">🗄️</span><span>Also into <strong>Database Design</strong> &amp; Information Systems</span></li>
+                        </ul>
+                        <button class="btn btn-outline intro-btn" data-ptab-link="about">SEE FULL DETAILS</button>
+                    </div>
+
+                    <div class="fb-card card-pad reveal delay-1">
+                        <div class="card-head">
+                            <h3>Photos</h3>
+                            <button class="link-btn" data-ptab-link="photos">See all</button>
+                        </div>
+                        <div class="photo-mini">
+                            <button data-open-project="redline" aria-label="REDLINE Store"><img src="redline.jpg" alt=""></button>
+                            <button data-open-project="heart" aria-label="Heart Studio"><img src="heart-studio.jpg" alt=""></button>
+                            <button data-open-project="water" aria-label="People's Water"><img src="peoples-water.jpg" alt=""></button>
+                            <button data-open-project="library" aria-label="Library Reservation ERD"><img src="library-erd.jpg" alt=""></button>
+                            <button data-open-project="rentals" aria-label="Computer Rentals and Sales"><img src="computer-rentals.jpg" alt=""></button>
+                            <button data-open-project="portfolio" aria-label="Personal Portfolio"><img src="creative-portfolio.jpg" alt=""></button>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <div class="feed">
+
+                    <div class="fb-card composer reveal">
+                        <img src="rex.jpg" alt="">
+                        <button class="composer-input" data-page="contact">Leave a message for Rex…</button>
+                    </div>
+
+                    <article class="fb-card post reveal" data-post="redline" data-title="REDLINE Store">
+                        <div class="post-head">
+                            <img src="rex.jpg" alt="">
+                            <div class="post-name"><strong>Rex Lopez</strong><span>Shared a project · 🌐 Public</span></div>
+                        </div>
+                        <div class="post-body">
+                            <p>REDLINE Store — a streetwear-inspired online store concept with a bold red-and-black identity and a product-focused layout.</p>
+                            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></div>
+                        </div>
+                        <button class="post-media" data-open-project="redline" aria-label="Open REDLINE Store details"><img src="redline.jpg" alt="REDLINE Store"></button>
+                        <div class="post-stats"><span class="post-reactions"></span></div>
+                        <div class="post-actions">
+                            <button class="post-action" data-action="like"><span class="like-ico">👍</span> Like</button>
+                            <button class="post-action" data-action="comment">💬 Comment</button>
+                            <button class="post-action" data-action="share">↗ Share</button>
+                        </div>
+                    </article>
+
+                    <article class="fb-card post reveal" data-post="heart" data-title="Heart Studio">
+                        <div class="post-head">
+                            <img src="rex.jpg" alt="">
+                            <div class="post-name"><strong>Rex Lopez</strong><span>Shared a project · 🌐 Public</span></div>
+                        </div>
+                        <div class="post-body">
+                            <p>Heart Studio — an information system concept for a printing shop, focused on inventory management and document organization.</p>
+                            <div class="project-tags"><span>MIS</span><span>DATABASE</span><span>UI DESIGN</span></div>
+                        </div>
+                        <button class="post-media" data-open-project="heart" aria-label="Open Heart Studio details"><img src="heart-studio.jpg" alt="Heart Studio"></button>
+                        <div class="post-stats"><span class="post-reactions"></span></div>
+                        <div class="post-actions">
+                            <button class="post-action" data-action="like"><span class="like-ico">👍</span> Like</button>
+                            <button class="post-action" data-action="comment">💬 Comment</button>
+                            <button class="post-action" data-action="share">↗ Share</button>
+                        </div>
+                    </article>
+
+                    <article class="fb-card post reveal" data-post="note-practice" data-title="Progress Takes Practice">
+                        <div class="post-head">
+                            <img src="rex.jpg" alt="">
+                            <div class="post-name"><strong>Rex Lopez</strong><span>Note · Learning · 🌐 Public</span></div>
+                        </div>
+                        <div class="post-body big">
+                            <p>Progress takes practice. Every project, mistake, and revision is an opportunity to understand something better.</p>
+                        </div>
+                        <div class="post-stats"><span class="post-reactions"></span></div>
+                        <div class="post-actions">
+                            <button class="post-action" data-action="like"><span class="like-ico">👍</span> Like</button>
+                            <button class="post-action" data-action="comment">💬 Comment</button>
+                            <button class="post-action" data-action="share">↗ Share</button>
+                        </div>
+                    </article>
+
+                    <article class="fb-card post reveal" data-post="water" data-title="People's Water">
+                        <div class="post-head">
+                            <img src="rex.jpg" alt="">
+                            <div class="post-name"><strong>Rex Lopez</strong><span>Shared a project · 🌐 Public</span></div>
+                        </div>
+                        <div class="post-body">
+                            <p>People's Water — a proposed integrated information system for managing sales, inventory, customers, deliveries, and reports.</p>
+                            <div class="project-tags"><span>MIS</span><span>DATABASE</span><span>BUSINESS SYSTEM</span></div>
+                        </div>
+                        <button class="post-media" data-open-project="water" aria-label="Open People's Water details"><img src="peoples-water.jpg" alt="People's Water"></button>
+                        <div class="post-stats"><span class="post-reactions"></span></div>
+                        <div class="post-actions">
+                            <button class="post-action" data-action="like"><span class="like-ico">👍</span> Like</button>
+                            <button class="post-action" data-action="comment">💬 Comment</button>
+                            <button class="post-action" data-action="share">↗ Share</button>
+                        </div>
+                    </article>
+
+                    <article class="fb-card post reveal" data-post="note-design" data-title="Design Is More Than Appearance">
+                        <div class="post-head">
+                            <img src="rex.jpg" alt="">
+                            <div class="post-name"><strong>Rex Lopez</strong><span>Note · Design · 🌐 Public</span></div>
+                        </div>
+                        <div class="post-body big">
+                            <p>A good interface should not only look attractive. It should also be clear, accessible, organized, and easy to use.</p>
+                        </div>
+                        <div class="post-stats"><span class="post-reactions"></span></div>
+                        <div class="post-actions">
+                            <button class="post-action" data-action="like"><span class="like-ico">👍</span> Like</button>
+                            <button class="post-action" data-action="comment">💬 Comment</button>
+                            <button class="post-action" data-action="share">↗ Share</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div class="ptab-panel" data-panel="about" role="tabpanel" hidden>
+            <div class="panel-grid">
+
+                <div class="fb-card card-pad reveal">
+                    <h3>Overview</h3>
+                    <p class="intro-bio">I'm a third-year Bachelor of Science in Information Technology student interested in web development, user interface design, database management, and information systems. I enjoy exploring how technology can solve everyday problems.</p>
+                    <div class="info-list">
+                        <div class="info-box"><span>FULL NAME</span><strong>Rex Lopez</strong></div>
+                        <div class="info-box"><span>EDUCATION</span><strong>BS Information Technology</strong></div>
+                        <div class="info-box"><span>LOCATION</span><strong>Philippines</strong></div>
+                        <div class="info-box"><span>INTEREST</span><strong>Web Development &amp; UI Design</strong></div>
+                    </div>
+                </div>
+
+                <div class="fb-card card-pad reveal delay-1">
+                    <h3>Skills &amp; Interests</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><h4>HTML &amp; CSS</h4><p>Building and styling responsive web pages.</p></div>
+                        <div class="skill-card"><h4>JAVASCRIPT</h4><p>Learning interactive website functionality.</p></div>
+                        <div class="skill-card"><h4>DATABASE DESIGN</h4><p>Creating ERDs and understanding database relationships.</p></div>
+                        <div class="skill-card"><h4>UI / UX DESIGN</h4><p>Exploring layouts, visual hierarchy, and usability.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PHOTOS TAB -->
+        <div class="ptab-panel" data-panel="photos" role="tabpanel" hidden>
+            <div class="fb-card card-pad reveal">
+                <h3>Project Photos</h3>
+                <div class="photo-grid">
+                    <button class="photo-tile" data-open-project="redline"><img src="redline.jpg" alt="REDLINE Store"><span>REDLINE Store</span></button>
+                    <button class="photo-tile" data-open-project="heart"><img src="heart-studio.jpg" alt="Heart Studio"><span>Heart Studio</span></button>
+                    <button class="photo-tile" data-open-project="water"><img src="peoples-water.jpg" alt="People's Water"><span>People's Water</span></button>
+                    <button class="photo-tile" data-open-project="library"><img src="library-erd.jpg" alt="Library Reservation ERD"><span>Library Reservation ERD</span></button>
+                    <button class="photo-tile" data-open-project="rentals"><img src="computer-rentals.jpg" alt="Computer Rentals and Sales"><span>Computer Rentals &amp; Sales</span></button>
+                    <button class="photo-tile" data-open-project="portfolio"><img src="creative-portfolio.jpg" alt="Personal Portfolio"><span>Personal Portfolio</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     WORK PAGE
+========================================= -->
+
+<section class="page" id="work">
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">MY PORTFOLIO</span>
+            <h1 class="section-title">SELECTED <span class="accent">WORK.</span></h1>
+            <p class="section-description">
+                These projects represent my experience in website design,
+                information systems, database modeling, and creative development.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card reveal" tabindex="0" role="button" data-project="redline">
+                <div class="project-image">
+                    <img src="redline.jpg" alt="REDLINE online clothing store">
+                    <span class="project-number">01 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">E-COMMERCE WEBSITE</span>
+                    <h3>REDLINE Store</h3>
+                    <p>A modern streetwear store concept featuring product listings, navigation, and a bold red-and-black interface.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay-1" tabindex="0" role="button" data-project="heart">
+                <div class="project-image">
+                    <img src="heart-studio.jpg" alt="Heart Studio system">
+                    <span class="project-number">02 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">INFORMATION SYSTEM</span>
+                    <h3>Heart Studio</h3>
+                    <p>An integrated inventory and document management information system concept for a printing shop.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>MIS</span><span>DATABASE</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal" tabindex="0" role="button" data-project="water">
+                <div class="project-image">
+                    <img src="peoples-water.jpg" alt="People's Water information system">
+                    <span class="project-number">03 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">BUSINESS INFORMATION SYSTEM</span>
+                    <h3>People's Water</h3>
+                    <p>A proposed integrated information system for managing sales, inventory, customers, deliveries, and reports.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>MIS</span><span>WEB SYSTEM</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay-1" tabindex="0" role="button" data-project="library">
+                <div class="project-image">
+                    <img src="library-erd.jpg" alt="Library reservation database ERD">
+                    <span class="project-number">04 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">DATABASE DESIGN</span>
+                    <h3>Library Reservation ERD</h3>
+                    <p>A database design concept showing the relationships between library users, books, reservations, and transactions.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>ERD</span><span>SQL</span><span>DATABASE</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal" tabindex="0" role="button" data-project="rentals">
+                <div class="project-image">
+                    <img src="computer-rentals.jpg" alt="Computer rentals and sales ERD">
+                    <span class="project-number">05 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">DATABASE DESIGN</span>
+                    <h3>Computer Rentals & Sales</h3>
+                    <p>A relational database model for tracking computer products, rentals, customers, and sales transactions.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>ERD</span><span>SQL</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay-1" tabindex="0" role="button" data-project="portfolio">
+                <div class="project-image">
+                    <img src="creative-portfolio.jpg" alt="Personal portfolio website">
+                    <span class="project-number">06 / 06</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">PERSONAL WEB DESIGN</span>
+                    <h3>Personal Portfolio</h3>
+                    <p>A personal digital space showcasing my background, creative work, interests, and development journey.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     ABOUT PAGE
+========================================= -->
+
+<section class="page" id="about">
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">GET TO KNOW ME</span>
+            <h1 class="section-title">BEHIND THE <span class="accent">SCREEN.</span></h1>
+            <p class="section-description">
+                A little introduction about who I am, what I do, and what
+                motivates me to keep learning.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+                <img src="rex.jpg" alt="Rex Lopez portrait">
+                <div class="about-image-caption">
+                    <span>REX LOPEZ</span>
+                    <span>PHILIPPINES</span>
+                </div>
+            </div>
+
+            <div class="about-copy reveal delay-1">
+
+                <span class="section-label">01 / INTRODUCTION</span>
+                <h2 class="section-title" style="font-size:clamp(30px,4vw,46px);margin-bottom:25px">
+                    LEARNING. <span class="accent">BUILDING.</span> IMPROVING.
+                </h2>
+
+                <p>
+                    Hello! I'm Rex Lopez, a third-year Bachelor of Science in
+                    Information Technology student. I am interested in web
+                    development, user interface design, database management,
+                    and information systems.
+                </p>
+
+                <p>
+                    I enjoy exploring how technology can solve everyday
+                    problems. Through academic projects and personal
+                    experiments, I continue developing my skills in designing
+                    and building functional digital experiences.
+                </p>
+
+                <p>
+                    I believe that improvement comes from practice,
+                    curiosity, and the willingness to learn something new.
+                    My goal is to become a skilled IT professional who can
+                    create useful and meaningful digital solutions.
+                </p>
+
+                <h3>PERSONAL INFORMATION</h3>
+
+                <div class="info-list">
+                    <div class="info-box">
+                        <span>FULL NAME</span>
+                        <strong>Rex Lopez</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>EDUCATION</span>
+                        <strong>BS Information Technology</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>LOCATION</span>
+                        <strong>Philippines</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>INTEREST</span>
+                        <strong>Web Development & UI Design</strong>
+                    </div>
+                </div>
+
+                <h3>MY SKILLS & INTERESTS</h3>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <h4>HTML & CSS</h4>
+                        <p>Building and styling responsive web pages.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>JAVASCRIPT</h4>
+                        <p>Learning interactive website functionality.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>DATABASE DESIGN</h4>
+                        <p>Creating ERDs and understanding database relationships.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>UI / UX DESIGN</h4>
+                        <p>Exploring layouts, visual hierarchy, and usability.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     SERVICES PAGE
+========================================= -->
+
+<section class="page" id="services">
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">WHAT I EXPLORE</span>
+            <h1 class="section-title">MY AREAS OF <span class="accent">INTEREST.</span></h1>
+            <p class="section-description">
+                These are the areas I enjoy working on and continuously
+                improving through practice and academic projects.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card reveal">
+                <div class="service-icon">⌘</div>
+                <h3>Web Development</h3>
+                <p>
+                    Creating responsive website layouts using HTML, CSS,
+                    and JavaScript with a focus on usability and presentation.
+                </p>
+            </div>
+
+            <div class="service-card reveal delay-1">
+                <div class="service-icon">✳</div>
+                <h3>UI / UX Design</h3>
+                <p>
+                    Exploring clean interfaces, visual hierarchy,
+                    interactive elements, and user-friendly layouts.
+                </p>
+            </div>
+
+            <div class="service-card reveal delay-2">
+                <div class="service-icon">▦</div>
+                <h3>Database Design</h3>
+                <p>
+                    Designing entity relationship diagrams, organizing
+                    data, and understanding relational database structures.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-icon">◈</div>
+                <h3>Information Systems</h3>
+                <p>
+                    Exploring digital solutions that help businesses
+                    manage their information and daily operations.
+                </p>
+            </div>
+
+            <div class="service-card reveal delay-1">
+                <div class="service-icon">⌁</div>
+                <h3>Creative Projects</h3>
+                <p>
+                    Experimenting with website concepts, visual styles,
+                    animations, and creative digital presentations.
+                </p>
+            </div>
+
+            <div class="service-card reveal delay-2">
+                <div class="service-icon">↗</div>
+                <h3>Continuous Learning</h3>
+                <p>
+                    Practicing new technologies, improving existing skills,
+                    and learning through hands-on development.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     NOTES PAGE
+========================================= -->
+
+<section class="page" id="notes">
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">MY JOURNEY</span>
+            <h1 class="section-title">THOUGHTS & <span class="accent">NOTES.</span></h1>
+            <p class="section-description">
+                Some of the ideas, lessons, and reminders that keep me
+                motivated throughout my learning journey.
+            </p>
+        </div>
+
+        <div class="notes-grid">
+
+            <article class="note-card reveal">
+                <span class="note-date">01 / LEARNING</span>
+                <h3>Progress Takes Practice</h3>
+                <p>
+                    Learning web development takes patience. Every project,
+                    mistake, and revision is an opportunity to understand
+                    something better.
+                </p>
+            </article>
+
+            <article class="note-card reveal delay-1">
+                <span class="note-date">02 / DESIGN</span>
+                <h3>Design Is More Than Appearance</h3>
+                <p>
+                    A good interface should not only look attractive.
+                    It should also be clear, accessible, organized,
+                    and easy to use.
+                </p>
+            </article>
+
+            <article class="note-card reveal">
+                <span class="note-date">03 / DEVELOPMENT</span>
+                <h3>Build, Test, Improve</h3>
+                <p>
+                    Development is a continuous process. Testing ideas,
+                    finding errors, and improving the result are all
+                    part of creating better digital experiences.
+                </p>
+            </article>
+
+            <article class="note-card reveal delay-1">
+                <span class="note-date">04 / MINDSET</span>
+                <h3>Stay Curious</h3>
+                <p>
+                    Technology continues to change. Staying curious and
+                    being open to learning helps me grow as an IT student
+                    and aspiring developer.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CONTACT PAGE
+========================================= -->
+
+<section class="page" id="contact">
+
+    <div class="container section">
+
+        <div class="section-heading reveal">
+            <span class="section-label">GET IN TOUCH</span>
+            <h1 class="section-title">LET'S START A <span class="accent">CONVERSATION.</span></h1>
+            <p class="section-description">
+                Have a question, project idea, or opportunity?
+                Feel free to send me a message.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-details reveal">
+
+                <h3>Let's connect.</h3>
+
+                <p>
+                    I'm always interested in learning, collaborating,
+                    and connecting with people who share an interest
+                    in technology and creative digital projects.
+                </p>
+
+                <div class="contact-detail">
+                    <span>NAME</span>
+                    <strong>Rex Lopez</strong>
+                </div>
+
+                <div class="contact-detail">
+                    <span>LOCATION</span>
+                    <strong>Philippines</strong>
+                </div>
+
+                <div class="contact-detail">
+                    <span>EMAIL</span>
+                    <strong>Replace with your email address</strong>
+                </div>
+
+                <div class="contact-detail">
+                    <span>STATUS</span>
+                    <strong>Open to learning opportunities</strong>
+                </div>
+
+            </div>
+
+            <form class="contact-form reveal delay-1" id="contactForm">
+
+                <div class="form-group">
+                    <label for="visitorName">YOUR NAME</label>
+                    <input type="text" id="visitorName" name="name"
+                        placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitorEmail">YOUR EMAIL</label>
+                    <input type="email" id="visitorEmail" name="email"
+                        placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitorSubject">SUBJECT</label>
+                    <input type="text" id="visitorSubject" name="subject"
+                        placeholder="What is this about?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitorMessage">MESSAGE</label>
+                    <textarea id="visitorMessage" name="message"
+                        placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    PREPARE EMAIL ↗
+                </button>
+
+                <p class="form-note">
+                    This form opens your default email application.
+                    Review the message and press Send there to deliver it.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+    <div class="container footer-content">
+
+        <div class="footer-logo">REX<span>.</span></div>
+
+        <p>© <span id="currentYear"></span> Rex Lopez. All rights reserved.</p>
+
+        <button class="back-top" id="backTop">BACK TO TOP ↑</button>
+
+    </div>
+</footer>
+
+<!-- =========================================
+     PROJECT MODAL
+========================================= -->
+
+<div class="modal" id="projectModal" role="dialog"
+    aria-modal="true" aria-labelledby="modalTitle">
+
+    <div class="modal-content">
+
+        <button class="modal-close" id="modalClose" aria-label="Close project details">
+            ×
+        </button>
+
+        <img src="" alt="" class="modal-image" id="modalImage">
+
+        <span class="project-category" id="modalCategory"></span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <div class="project-tags" id="modalTags"></div>
+
+    </div>
+
+</div>
+
+<script>
+/* =========================================
+   1. NAVIGATION / MULTI-PAGE SYSTEM
+========================================= */
+
+const pages = document.querySelectorAll(".page");
+const navButtons = document.querySelectorAll("[data-page]");
+const navLinks = document.getElementById("navLinks");
+const menuButton = document.getElementById("menuButton");
+
+function showPage(pageName) {
+    const target = document.getElementById(pageName);
+
+    if (!target || !target.classList.contains("page")) {
+        return;
+    }
+
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+    target.classList.add("active");
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.classList.toggle(
+            "active",
+            link.dataset.page === pageName
+        );
+    });
+
+    closeNavigation();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    setTimeout(() => {
+        revealElements(target);
+    }, 80);
+
+    const titles = {
+        home: "REX LOPEZ | Digital Portfolio",
+        work: "My Work | Rex Lopez",
+        about: "About Me | Rex Lopez",
+        services: "My Interests | Rex Lopez",
+        notes: "My Notes | Rex Lopez",
+        contact: "Contact | Rex Lopez",
+        profile: "Profile | Rex Lopez"
+    };
+
+    document.title = titles[pageName] || "REX LOPEZ | Digital Portfolio";
+}
+
+navButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        showPage(button.dataset.page);
+    });
+});
+
+/* Header burger menu — positioned beside the theme toggle */
+function setMenuState(open) {
+    navLinks.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
+    menuButton.classList.toggle("is-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+}
+
+function closeNavigation() {
+    setMenuState(false);
+}
+
+menuButton.addEventListener("click", event => {
+    event.stopPropagation();
+    setMenuState(!navLinks.classList.contains("open"));
+});
+
+navLinks.addEventListener("click", event => {
+    if (event.target.closest("[data-page]")) closeNavigation();
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeNavigation();
+});
+
+document.addEventListener("click", event => {
+    if (!navLinks.contains(event.target) && !menuButton.contains(event.target)) {
+        closeNavigation();
+    }
+});
+
+/* =========================================
+   2. LIGHT / DARK MODE
+========================================= */
+
+const themeToggle = document.getElementById("themeToggle");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function updateThemeIcon() {
+    const isLight = document.body.classList.contains("light");
+    themeToggle.textContent = isLight ? "☾" : "☼";
+    themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "Switch to dark mode" : "Switch to light mode"
+    );
+    themeMeta.setAttribute("content", isLight ? "#f6f4ef" : "#090909");
+}
+
+const savedTheme = localStorage.getItem("rexPortfolioTheme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light");
+}
+
+updateThemeIcon();
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    const newTheme = document.body.classList.contains("light")
+        ? "light"
+        : "dark";
+
+    localStorage.setItem("rexPortfolioTheme", newTheme);
+    updateThemeIcon();
+});
+
+/* =========================================
+   3. SCROLL REVEAL ANIMATIONS
+========================================= */
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !document.body.classList.contains("preload")) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+function revealElements(parent = document) {
+    parent.querySelectorAll(".reveal:not(.visible)").forEach(element => {
+        revealObserver.observe(element);
+    });
+}
+
+revealElements();
+
+/* =========================================
+   4. PROJECT INFORMATION
+========================================= */
+
+const projectInformation = {
+    redline: {
+        title: "REDLINE Store",
+        category: "E-Commerce / Web Design",
+        image: "redline.jpg",
+        description: "REDLINE is a streetwear-inspired online store concept. It focuses on a bold red-and-black visual identity, product presentation, navigation, and an engaging shopping interface. The project explores how front-end development can support an online retail experience.",
+        tags: ["HTML", "CSS", "JAVASCRIPT", "WEB DESIGN"]
+    },
+
+    heart: {
+        title: "Heart Studio",
+        category: "Management Information System",
+        image: "heart-studio.jpg",
+        description: "Heart Studio is a printing shop and photobooth studio case study. The proposed information system focuses on improving inventory monitoring, sales recording, and document organization while addressing the handling of customer files.",
+        tags: ["MIS", "INVENTORY", "DOCUMENT MANAGEMENT"]
+    },
+
+    water: {
+        title: "People's Water",
+        category: "Business Information System",
+        image: "peoples-water.jpg",
+        description: "People's Water is a proposed integrated information system for a water refilling station. It focuses on sales records, inventory levels, customer information, delivery monitoring, employee activities, and management reports.",
+        tags: ["MIS", "DATABASE", "BUSINESS SYSTEM"]
+    },
+
+    library: {
+        title: "Library Reservation ERD",
+        category: "Database Design",
+        image: "library-erd.jpg",
+        description: "This academic database design project illustrates the relationships between library users, books, reservations, and transactions. It demonstrates the use of entities, attributes, primary keys, and foreign keys.",
+        tags: ["ERD", "SQL", "DATABASE"]
+    },
+
+    rentals: {
+        title: "Computer Rentals & Sales",
+        category: "Database Design",
+        image: "computer-rentals.jpg",
+        description: "A relational database model for a computer rental and sales business. The design organizes product information, customers, rental transactions, and sales records into connected entities.",
+        tags: ["ERD", "DATABASE", "SQL"]
+    },
+
+    portfolio: {
+        title: "Personal Portfolio",
+        category: "Personal Web Design",
+        image: "creative-portfolio.jpg",
+        description: "A personal digital portfolio designed to present my background, academic projects, skills, interests, and development journey in an organized and responsive website.",
+        tags: ["HTML", "CSS", "JAVASCRIPT", "UI DESIGN"]
+    }
+};
+
+/* =========================================
+   5. PROJECT MODAL
+========================================= */
+
+const modal = document.getElementById("projectModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalCategory = document.getElementById("modalCategory");
+const modalDescription = document.getElementById("modalDescription");
+const modalTags = document.getElementById("modalTags");
+const modalClose = document.getElementById("modalClose");
+
+let lastFocusedProject = null;
+
+function openProject(projectKey, trigger) {
+    const project = projectInformation[projectKey];
+
+    if (!project) return;
+
+    lastFocusedProject = trigger;
+
+    modalImage.src = project.image;
+    modalImage.alt = project.title;
+    modalTitle.textContent = project.title;
+    modalCategory.textContent = project.category;
+    modalDescription.textContent = project.description;
+
+    modalTags.innerHTML = "";
+
+    project.tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.textContent = tag;
+        modalTags.appendChild(span);
+    });
+
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+    modalClose.focus();
+}
+
+function closeProject() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+
+    if (lastFocusedProject) {
+        lastFocusedProject.focus();
+    }
+}
+
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+        openProject(card.dataset.project, card);
+    });
+
+    card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openProject(card.dataset.project, card);
+        }
+    });
+});
+
+modalClose.addEventListener("click", closeProject);
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) {
+        closeProject();
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+        closeProject();
+    }
+});
+
+/* =========================================
+   6. CONTACT FORM
+========================================= */
+
+// Replace this placeholder with your actual email address.
+const PORTFOLIO_EMAIL = "your-email@example.com";
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) {
+        return;
+    }
+
+    const name = document.getElementById("visitorName").value.trim();
+    const email = document.getElementById("visitorEmail").value.trim();
+    const subject = document.getElementById("visitorSubject").value.trim();
+    const message = document.getElementById("visitorMessage").value.trim();
+
+    const emailBody =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message;
+
+    const mailtoLink =
+        "mailto:" + PORTFOLIO_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(emailBody);
+
+    window.location.href = mailtoLink;
+});
+
+/* =========================================
+   7. CUSTOM CURSOR
+========================================= */
+
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
+
+if (window.matchMedia("(pointer: fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let outlineX = 0;
+    let outlineY = 0;
+
+    document.addEventListener("mousemove", event => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+
+        cursorDot.style.left = mouseX + "px";
+        cursorDot.style.top = mouseY + "px";
+    });
+
+    function animateCursor() {
+        outlineX += (mouseX - outlineX) * .15;
+        outlineY += (mouseY - outlineY) * .15;
+
+        cursorOutline.style.left = outlineX + "px";
+        cursorOutline.style.top = outlineY + "px";
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+    document.querySelectorAll("a, button, .project-card").forEach(element => {
+        element.addEventListener("mouseenter", () => {
+            cursorOutline.classList.add("hover");
+        });
+
+        element.addEventListener("mouseleave", () => {
+            cursorOutline.classList.remove("hover");
+        });
+    });
+}
+
+/* =========================================
+   8. FOOTER AND BACK TO TOP
+========================================= */
+
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+document.getElementById("backTop").addEventListener("click", () => {
+    showPage("home");
+});
+
+/* Outside-click and Escape handling are managed by the unified menu controller above. */
+
+/* =========================================
+   10. INITIAL PAGE
+========================================= */
+
+window.addEventListener("load", () => {
+    revealElements(document.getElementById("home"));
+});
+
+/* =========================================
+   11. PREMIUM MICRO-INTERACTIONS
+========================================= */
+
+const motionReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const progressBar = document.getElementById("scrollProgress");
+const pageCurtain = document.getElementById("pageCurtain");
+const siteLoader = document.getElementById("siteLoader");
+
+/* Elegant first-load screen */
+window.addEventListener("load", () => {
+    /* The loader is dismissed from the enter screen below */
+});
+
+/* Scroll progress + subtle page ambience */
+function updateScrollEffects() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    if (progressBar) progressBar.style.width = progress + "%";
+}
+window.addEventListener("scroll", updateScrollEffects, { passive: true });
+updateScrollEffects();
+
+/* Cursor-following ambient glow */
+if (!motionReduced && window.matchMedia("(pointer: fine)").matches) {
+    window.addEventListener("pointermove", event => {
+        document.body.style.setProperty("--glow-x", event.clientX + "px");
+        document.body.style.setProperty("--glow-y", event.clientY + "px");
+    }, { passive: true });
+}
+
+/* Smooth curtain transition: the page swaps while the curtain covers the screen */
+const originalShowPage = showPage;
+const curtainLabel = document.getElementById("curtainLabel");
+let pageBusy = false;
+
+showPage = function(pageName) {
+    const current = document.querySelector(".page.active")?.id;
+
+    if (pageBusy) return;
+
+    if (pageName === current || motionReduced || !pageCurtain) {
+        originalShowPage(pageName);
+        if (pageName === "profile") countUp();
+        return;
+    }
+
+    pageBusy = true;
+    closeNavigation();
+
+    if (curtainLabel) curtainLabel.textContent = pageName.toUpperCase();
+
+    pageCurtain.classList.remove("play");
+    curtainLabel?.classList.remove("play");
+    void pageCurtain.offsetWidth;
+    pageCurtain.classList.add("play");
+    curtainLabel?.classList.add("play");
+
+    window.setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        originalShowPage(pageName);
+        if (pageName === "profile") countUp();
+    }, 300);
+
+    window.setTimeout(() => { pageBusy = false; }, 680);
+};
+
+/* Staggered reveals for groups, including elements on newly opened pages */
+function staggerVisibleItems() {
+    document.querySelectorAll(".project-grid, .services-grid, .notes-grid, .skills-grid, .info-list, .intro-grid").forEach(group => {
+        [...group.children].forEach((item, index) => {
+            item.style.setProperty("--reveal-delay", Math.min(index * 85, 425) + "ms");
+        });
+    });
+}
+staggerVisibleItems();
+
+/* Subtle pointer tilt on larger screens only */
+if (!motionReduced && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".project-card, .service-card, .note-card").forEach(card => {
+        card.addEventListener("pointermove", event => {
+            if (window.innerWidth < 900) return;
+            const rect = card.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width - .5;
+            const y = (event.clientY - rect.top) / rect.height - .5;
+            card.style.transform = `perspective(900px) rotateX(${(-y * 2.2).toFixed(2)}deg) rotateY(${(x * 2.2).toFixed(2)}deg) translateY(-5px)`;
+        });
+        card.addEventListener("pointerleave", () => {
+            card.style.transform = "";
+        });
+    });
+}
+
+/* Button ripple feedback */
+document.querySelectorAll(".btn, .nav-contact, .theme-toggle").forEach(control => {
+    control.addEventListener("pointerdown", event => {
+        if (motionReduced) return;
+        const rect = control.getBoundingClientRect();
+        const ripple = document.createElement("span");
+        ripple.className = "interaction-ripple";
+        ripple.style.left = (event.clientX - rect.left) + "px";
+        ripple.style.top = (event.clientY - rect.top) + "px";
+        control.appendChild(ripple);
+        window.setTimeout(() => ripple.remove(), 650);
+    });
+});
+
+/* Keep the motion layer responsive to page changes */
+const revealRefresh = new MutationObserver(() => {
+    const activePage = document.querySelector(".page.active");
+    if (activePage) {
+        revealElements(activePage);
+        staggerVisibleItems();
+    }
+});
+pages.forEach(page => revealRefresh.observe(page, { attributes: true, attributeFilter: ["class"] }));
+
+
+
+/* Continuous premium motion accents */
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const heroVisual = document.querySelector(".hero-visual");
+    let motionFrame = null;
+    window.addEventListener("scroll", () => {
+        if (motionFrame) cancelAnimationFrame(motionFrame);
+        motionFrame = requestAnimationFrame(() => {
+            const y = Math.min(window.scrollY, 500);
+            document.documentElement.style.setProperty("--scroll-depth", y + "px");
+        });
+    }, { passive: true });
+
+    if (heroVisual && window.matchMedia("(pointer:fine)").matches) {
+        document.querySelector(".hero")?.addEventListener("pointermove", event => {
+            const rect = event.currentTarget.getBoundingClientRect();
+            const px = (event.clientX - rect.left) / rect.width - .5;
+            const py = (event.clientY - rect.top) / rect.height - .5;
+            heroVisual.style.setProperty("--hero-tilt-x", (py * -3).toFixed(2) + "deg");
+            heroVisual.style.setProperty("--hero-tilt-y", (px * 3).toFixed(2) + "deg");
+        });
+        document.querySelector(".hero")?.addEventListener("pointerleave", () => {
+            heroVisual.style.setProperty("--hero-tilt-x", "0deg");
+            heroVisual.style.setProperty("--hero-tilt-y", "0deg");
+        });
+    }
+}
+
+
+/* =========================================
+   12. ENTER SCREEN + BACKGROUND MUSIC
+========================================= */
+
+const bgMusic = document.getElementById("bgMusic");
+const musicPlayer = document.getElementById("musicPlayer");
+const musicToggle = document.getElementById("musicToggle");
+const musicVolume = document.getElementById("musicVolume");
+const enterBtn = document.getElementById("enterBtn");
+
+const MUSIC_OFF_KEY = "rexPortfolioMusicOff";
+const MUSIC_VOL_KEY = "rexPortfolioMusicVolume";
+
+function storeGet(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+}
+function storeSet(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+}
+function storeRemove(key) {
+    try { localStorage.removeItem(key); } catch (e) {}
+}
+
+let musicVol = Math.min(1, Math.max(0, (Number(storeGet(MUSIC_VOL_KEY)) || 35) / 100));
+musicVolume.value = Math.round(musicVol * 100);
+
+function setMusicUI(playing) {
+    musicPlayer.classList.toggle("playing", playing);
+    musicToggle.setAttribute("aria-pressed", String(playing));
+    musicToggle.setAttribute("aria-label", playing ? "Pause music" : "Play music");
+}
+
+function fadeVolume(target, duration) {
+    const start = bgMusic.volume;
+    const t0 = performance.now();
+    (function step(now) {
+        const p = Math.min((now - t0) / duration, 1);
+        bgMusic.volume = Math.min(1, Math.max(0, start + (target - start) * p));
+        if (p < 1) requestAnimationFrame(step);
+    })(t0);
+}
+
+async function playMusic() {
+    try {
+        bgMusic.volume = 0;
+        await bgMusic.play();
+        setMusicUI(true);
+        fadeVolume(musicVol, 1500);
+    } catch (e) {
+        setMusicUI(false);
+    }
+}
+
+function pauseMusic() {
+    bgMusic.pause();
+    setMusicUI(false);
+}
+
+musicToggle.addEventListener("click", () => {
+    if (bgMusic.paused) {
+        storeRemove(MUSIC_OFF_KEY);
+        playMusic();
+    } else {
+        storeSet(MUSIC_OFF_KEY, "1");
+        pauseMusic();
+    }
+});
+
+musicVolume.addEventListener("input", () => {
+    musicVol = musicVolume.value / 100;
+    bgMusic.volume = musicVol;
+    storeSet(MUSIC_VOL_KEY, musicVolume.value);
+});
+
+/* If the audio file is missing, hide the player instead of showing a broken control */
+bgMusic.addEventListener("error", () => {
+    musicPlayer.classList.add("no-audio");
+});
+
+/* Pause while the tab is in the background, resume when the visitor returns */
+let resumeAfterHidden = false;
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        resumeAfterHidden = !bgMusic.paused;
+        if (resumeAfterHidden) bgMusic.pause();
+    } else if (resumeAfterHidden) {
+        resumeAfterHidden = false;
+        bgMusic.play().then(() => setMusicUI(true)).catch(() => setMusicUI(false));
+    }
+});
+
+/* Leave the enter screen, start the page animations and (if allowed) the music */
+function finishEntry(startAudio) {
+    document.body.classList.remove("preload");
+    siteLoader.classList.add("done");
+
+    document.querySelectorAll(".reveal:not(.visible)").forEach(element => {
+        revealObserver.unobserve(element);
+        revealObserver.observe(element);
+    });
+
+    if (startAudio && storeGet(MUSIC_OFF_KEY) !== "1") {
+        playMusic();
+    }
+}
+
+window.addEventListener("load", () => {
+    if (motionReduced || !enterBtn) {
+        finishEntry(false);
+
+        /* No enter screen: start the music on the first click, tap or key press */
+        const unlock = () => {
+            ["pointerdown", "keydown", "touchend"].forEach(type => {
+                document.removeEventListener(type, unlock);
+            });
+            if (storeGet(MUSIC_OFF_KEY) !== "1" && bgMusic.paused) playMusic();
+        };
+        ["pointerdown", "keydown", "touchend"].forEach(type => {
+            document.addEventListener(type, unlock);
+        });
+        return;
+    }
+
+    window.setTimeout(() => {
+        siteLoader.classList.add("ready");
+        enterBtn.focus({ preventScroll: true });
+    }, 800);
+});
+
+if (enterBtn) {
+    enterBtn.addEventListener("click", () => finishEntry(true));
+}
+
+/* =========================================
+   13. HERO TYPED ROLES
+========================================= */
+
+const typedRole = document.getElementById("typedRole");
+
+if (typedRole) {
+    const roles = ["BSIT Student", "Aspiring Web Developer", "UI / UX Explorer", "Database Designer"];
+
+    if (motionReduced) {
+        typedRole.textContent = roles[0];
+    } else {
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        (function typeRole() {
+            const word = roles[roleIndex];
+            charIndex += deleting ? -1 : 1;
+            typedRole.textContent = word.slice(0, charIndex);
+
+            let wait = deleting ? 45 : 85;
+
+            if (!deleting && charIndex === word.length) {
+                wait = 1600;
+                deleting = true;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                wait = 350;
+            }
+
+            window.setTimeout(typeRole, wait);
+        })();
+    }
+}
+
+/* =========================================
+   14. CARD SPOTLIGHT
+========================================= */
+
+const spotlightSelector = ".project-card, .service-card, .note-card, .skill-card, .info-box, .post";
+
+document.addEventListener("pointermove", event => {
+    const card = event.target.closest ? event.target.closest(spotlightSelector) : null;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--mx", (event.clientX - rect.left) + "px");
+    card.style.setProperty("--my", (event.clientY - rect.top) + "px");
+}, { passive: true });
+
+/* =========================================
+   15. PROFILE PAGE
+========================================= */
+
+const profileTabs = document.querySelectorAll(".ptab");
+const profilePanels = document.querySelectorAll(".ptab-panel");
+
+function showProfileTab(name) {
+    profileTabs.forEach(tab => {
+        const active = tab.dataset.ptab === name;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+    });
+
+    profilePanels.forEach(panel => {
+        panel.hidden = panel.dataset.panel !== name;
+    });
+}
+
+profileTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => showProfileTab(tab.dataset.ptab));
+
+    tab.addEventListener("keydown", event => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        const step = event.key === "ArrowRight" ? 1 : -1;
+        const next = profileTabs[(index + step + profileTabs.length) % profileTabs.length];
+        next.focus();
+        showProfileTab(next.dataset.ptab);
+    });
+});
+
+document.querySelectorAll("[data-ptab-link]").forEach(button => {
+    button.addEventListener("click", () => showProfileTab(button.dataset.ptabLink));
+});
+
+/* Open the existing project modal from profile photos and posts */
+document.addEventListener("click", event => {
+    const trigger = event.target.closest("[data-open-project]");
+    if (trigger) openProject(trigger.dataset.openProject, trigger);
+});
+
+/* Count-up numbers in the profile header */
+function countUp() {
+    document.querySelectorAll("[data-count]").forEach(element => {
+        const end = Number(element.dataset.count);
+
+        if (motionReduced) {
+            element.textContent = end;
+            return;
+        }
+
+        const t0 = performance.now();
+        const duration = 900;
+
+        (function step(now) {
+            const p = Math.min((now - t0) / duration, 1);
+            element.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(step);
+        })(t0);
+    });
+}
+
+/* Toast message */
+const toast = document.getElementById("toast");
+let toastTimer = null;
+
+function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => toast.classList.remove("show"), 2200);
+}
+
+/* Likes are saved only in this visitor's own browser */
+const LIKES_KEY = "rexPortfolioLikes";
+
+function readLikes() {
+    try { return JSON.parse(storeGet(LIKES_KEY) || "{}"); } catch (e) { return {}; }
+}
+
+const likedPosts = readLikes();
+
+function renderLike(post) {
+    const liked = Boolean(likedPosts[post.dataset.post]);
+    post.querySelector('[data-action="like"]').classList.toggle("liked", liked);
+    post.querySelector(".post-reactions").textContent = liked ? "👍 You liked this" : "";
+}
+
+function floatLike(button) {
+    const rect = button.getBoundingClientRect();
+    const icon = document.createElement("span");
+    icon.className = "like-float";
+    icon.textContent = "👍";
+    icon.style.left = (rect.left + rect.width / 2) + "px";
+    icon.style.top = (rect.top + rect.height / 2) + "px";
+    document.body.appendChild(icon);
+    window.setTimeout(() => icon.remove(), 900);
+}
+
+document.querySelectorAll(".post").forEach(post => {
+    renderLike(post);
+
+    post.querySelector('[data-action="like"]').addEventListener("click", event => {
+        const id = post.dataset.post;
+        likedPosts[id] = !likedPosts[id];
+        if (!likedPosts[id]) delete likedPosts[id];
+        storeSet(LIKES_KEY, JSON.stringify(likedPosts));
+        renderLike(post);
+        if (likedPosts[id] && !motionReduced) floatLike(event.currentTarget);
+    });
+
+    post.querySelector('[data-action="comment"]').addEventListener("click", () => {
+        const subject = document.getElementById("visitorSubject");
+        if (!subject.value.trim()) subject.value = "Re: " + post.dataset.title;
+        showPage("contact");
+    });
+
+    post.querySelector('[data-action="share"]').addEventListener("click", () => {
+        const url = location.href.split("#")[0];
+
+        if (navigator.share) {
+            navigator.share({ title: document.title, text: post.dataset.title, url: url }).catch(() => {});
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url)
+                .then(() => showToast("Link copied"))
+                .catch(() => showToast("Copy the link from your address bar"));
+        } else {
+            showToast("Copy the link from your address bar");
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
